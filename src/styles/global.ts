@@ -1,6 +1,13 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
+:root{
+  --primary-color: #00599D;
+
+  --white-color:#ffffff;
+}
+
 
 *{
   margin:0;
@@ -8,22 +15,26 @@ const GlobalStyle = createGlobalStyle`
   box-sizing:border-box;
 }
 
-html{
-  font-size:62.5%;
+${({ theme }) => css`
+  html {
+    font-size: 65%;
+  }
+
+  body {
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.sizes.medium};
+    color: ${theme.colors.darkGray};
+  }
+`}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-body{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+ul, li {
+    list-style: none;
 }
-
-html, body, #__next{
-  height:100%;
-}
-
-
-
-
 `
 
 export default GlobalStyle
