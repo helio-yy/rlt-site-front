@@ -2,6 +2,14 @@ import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
+@font-face {
+    font-family: 'bodoni_elegant_extbdregular';
+    src: url('https://s3.sa-east-1.amazonaws.com/assets.resortlatorre.com.br/fonts/bodonielegant-extrabold-webfont.woff') format('woff2'),;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root{
   --primary-color: #00599D;
 
@@ -14,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
   padding:0;
   box-sizing:border-box;
 }
+
 
 ${({ theme }) => css`
   html {

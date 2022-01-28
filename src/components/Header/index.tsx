@@ -11,7 +11,7 @@ const Header = () => {
       <S.Wrapper>
         <img
           src="https://d2odosjtfeb3gl.cloudfront.net/images/Logo-white-LTR.svg"
-          width={150}
+          width="150"
         />
 
         <BurgerNav />

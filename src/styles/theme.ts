@@ -1,7 +1,8 @@
 export default {
   grid: {
     container: '100%',
-    content: '115rem'
+    content: '115rem',
+    gutter: '2.5rem'
   },
   border: {
     xsmall: '0.313rem',
