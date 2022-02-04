@@ -47,7 +47,7 @@ const Header = () => {
         <MediaMatch greaterThan="medium">
           <S.myAccount>
             <Link href="/" passHref>
-              <button>Promoções</button>
+              <div className="btnPromo">Promoções</div>
             </Link>
 
             <CartDropdown />

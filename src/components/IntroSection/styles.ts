@@ -1,24 +1,26 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Section = styled.div`
+export const Container = styled.section`
   ${({ theme }) => css`
     width: ${theme.grid.container};
+    background-color: ${theme.colors.grennLight1};
   `}
 `
-export const WrapperTeste = styled.div`
+export const Content = styled.section`
   ${({ theme }) => css`
     max-width: ${theme.grid.content};
     grid-gap: ${theme.grid.gutter};
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 
     button {
       margin-top: ${theme.spacings.large};
     }
     ${media.lessThan('medium')`
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     `}
   `}
 `
@@ -26,26 +28,85 @@ export const WrapperTeste = styled.div`
 export const Column = styled.div`
   ${({ theme }) => css`
     padding: ${theme.spacings.large};
+    p {
+      color: white;
+      margin-bottom: ${theme.spacings.xsmall};
+    }
+
+    ${media.lessThan('large')`
+      padding: ${theme.spacings.xsmall};
+      p {
+        color: white;
+        margin-bottom: ${theme.spacings.xxlarge};
+      }
+        Button {
+        display: flex;
+        margin: 0 auto;
+      }
+    `}
   `}
 `
 
-export const Aside = styled.div`
+export const CardImages = styled.section`
   ${({ theme }) => css`
-    height: 130px;
+    height: 12rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: ${theme.spacings.small};
     grid-gap: ${theme.grid.gutter};
 
     ${media.lessThan('medium')`
-    height: 400px;
+    height: 35rem;
     grid-template-columns: 1fr;
     `}
   `}
 `
 
-/*****************************************/
+export const subTitle = styled.div`
+  ${({ theme }) => css`
+    display: block;
+    flex-direction: columns;
+    position: relative;
+    margin-bottom: ${theme.spacings.small};
 
+    p {
+      margin-bottom: ${theme.spacings.xxsmall};
+      font-size: 3rem;
+    }
+
+    img {
+      width: 30rem;
+    }
+
+    strong {
+      font-size: 2.5rem;
+      font-weight: ${theme.font.medium};
+
+      position: absolute;
+      top: 6.5rem;
+      right: 2rem;
+      color: white;
+    }
+
+    ${media.lessThan('large')`
+      text-align:center;
+      img{
+        margin:${theme.spacings.xsmall} 0;
+      }
+      strong{
+      position:relative;
+      top:0;
+      width:100%;
+      display: flex;
+      justify-content:center;
+      right:0;
+      }
+
+    `}
+  `}
+`
+
+/*HOVER IMAGES*/
 export const MainEffectHovers = styled.div`
   ${({ theme }) => css`
     position: relative;
@@ -118,14 +179,12 @@ export const PhotosWrapper = styled(MainEffectHovers)`
   }
 `
 
-// export const Semente = styled.div``
-
 export const Stamps = styled.div`
   ${({ theme }) => css`
     max-width: 28rem;
     display: grid;
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: ${theme.grid.gutter};
   `}
 `

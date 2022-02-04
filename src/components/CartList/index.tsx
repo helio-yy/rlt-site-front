@@ -1,3 +1,4 @@
+import Button from 'components/Button'
 import Link from 'next/link'
 import * as S from './styles'
 
@@ -16,7 +17,7 @@ const CartList = () => (
     <S.Footer>
       <S.SubTotal>Subtotal: R$ 5.596,00</S.SubTotal>
       <Link href="/">
-        <button>Finalizar pedido</button>
+        <Button size="small">Finalizar pedido</Button>
       </Link>
     </S.Footer>
   </S.Wrapper>

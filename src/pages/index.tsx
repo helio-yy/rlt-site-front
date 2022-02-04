@@ -6,6 +6,8 @@ import Footer from 'components/Footer'
 import SeoDescription from 'components/SeoDescription'
 import SocialRating from 'components/SocialRating'
 import IntroSection from 'components/IntroSection'
+import Newsletter from 'components/Newsletter'
+import FormSubscribeNew from 'components/FormSubscribeNew'
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       {/* <Header /> */}
       <Slide />
       <Main />
-      <IntroSection />
+
+      <FormSubscribeNew />
+      {/* <IntroSection /> */}
       {/* <SocialRating />
       <SeoDescription />
       <Footer /> */}

@@ -40,11 +40,6 @@ export const Footer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: right;
-    color: ${theme.colors.black};
-    button {
-      background-color: ${theme.colors.blueLight1};
-      cursor: pointer;
-    }
   `}
 `
 

@@ -52,7 +52,7 @@ export const myAccount = styled.div`
   display: flex;
   align-items: center;
 
-  button {
+  .btnPromo {
     background-color: transparent;
     padding: 0.4rem 1.3rem;
     font-size: 1.2rem;

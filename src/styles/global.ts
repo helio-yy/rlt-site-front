@@ -44,6 +44,16 @@ a {
 ul, li {
     list-style: none;
 }
+
+.hoverEffect{
+  transform: translateY(0);
+  transition: all 0.3s ease;
+
+  :hover{
+    transform: translateY(-0.2rem);
+  }
+}
+
 `
 
 export default GlobalStyle
