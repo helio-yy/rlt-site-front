@@ -3,6 +3,8 @@ import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined'
 import Button from 'components/Button'
 import * as S from './styles'
 import { Content } from 'components/Content'
+import Slider from 'react-slick'
+import Banner from 'components/Banner'
 
 const FormSubscribeNew = () => (
   <Content>

@@ -1,26 +1,13 @@
-import Checkbox from 'components/Checkbox'
-import Radio from 'components/Radio'
-import TextField from 'components/TextField'
-import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined'
-import FormSubscribeNew from 'components/FormSubscribeNew'
+import Banner from 'components/Banner'
 
-import * as S from './styles'
-import Button from 'components/Button'
+const props = {
+  img: 'https://s3.sa-east-1.amazonaws.com/cms.resortlatorre.com.br/Imagens/2021/Banner+Home_Julho+21.jpg',
+  title: '555',
+  subtitle: 'subtitulos ',
+  buttonLabel: 'Buy NOw',
+  buttonLink: '/games'
+}
 
-export const Newsletter = () => (
-  <S.Container>
-    <S.Content>
-      <br></br>
-      {/* <Checkbox label="primeiro" labelFor="primeiro" />
-      <Checkbox label="segundo" labelFor="segundo" />
-      <Radio label="Radio" labelFor="Radio" />
-      <Radio label="Radio" labelFor="Radio" value="anyValue" />
-      <Radio label="Radio" labelFor="check" value="anyValue" /> */}
-      <br></br>
-
-      <FormSubscribeNew />
-    </S.Content>
-  </S.Container>
-)
+export const Newsletter = () => <Banner {...props} />
 
 export default Newsletter
