@@ -2,15 +2,20 @@ import Banner, { BannerProps } from 'components/Banner'
 import Slider, { SliderSettings } from 'components/Slider'
 import * as S from './styles'
 
-type BannerSliderProps = {
+export type BannerSliderProps = {
   items: BannerProps[]
 }
 
 const settings: SliderSettings = {
   dots: true,
-  arrows: false,
-  verticalSwiping: true,
-  infinite: false
+  arrows: true,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1170,
+      settings: {}
+    }
+  ]
 }
 
 const BannerSlider = ({ items }: BannerSliderProps) => (

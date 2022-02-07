@@ -7,15 +7,15 @@ import SocialRating from 'components/SocialRating'
 import IntroSection from 'components/IntroSection'
 import Newsletter from 'components/Newsletter'
 import FormSubscribeNew from 'components/FormSubscribeNew'
-import Slider from 'components/Slider'
+import GameCardSlider from 'components/GameCardSlider'
 
 export default function Home() {
   return (
     <>
       {/* <Header /> */}
       <Main />
-      <Slider />
-      <FormSubscribeNew />
+      <GameCardSlider />
+      {/* <FormSubscribeNew /> */}
       <Newsletter />
       {/* <IntroSection /> */}
       {/* <SocialRating />
