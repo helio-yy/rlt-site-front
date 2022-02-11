@@ -8,19 +8,21 @@ import IntroSection from 'components/IntroSection'
 import Newsletter from 'components/Newsletter'
 import FormSubscribeNew from 'components/FormSubscribeNew'
 import GameCardSlider from 'components/GameCardSlider'
+import HeaderStick from 'components/HeaderStick'
 
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
+      <HeaderStick />
+      <Header />
       <Main />
-      <GameCardSlider />
+      {/* <GameCardSlider /> */}
       {/* <FormSubscribeNew /> */}
       <Newsletter />
-      {/* <IntroSection /> */}
-      {/* <SocialRating />
-      <SeoDescription />
-      <Footer /> */}
+      <IntroSection />
+      <SocialRating />
+      {/* <SeoDescription /> */}
+      <Footer />
     </>
   )
 }

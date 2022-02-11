@@ -121,7 +121,7 @@ export const MainEffectHovers = styled.div`
       position: absolute;
       bottom: 2rem;
       right: 2.5rem;
-      z-index: 10;
+      z-index: 2;
       font-family: 'bodoni_elegant_extbdregular';
     }
 

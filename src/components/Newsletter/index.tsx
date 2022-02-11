@@ -1,49 +1,45 @@
+import Button from 'components/Button'
 import { Content } from 'components/Content'
 import GameCardSlider from 'components/GameCardSlider'
+import { useState } from 'react'
 
 const items = [
   {
-    title: 'Diárias a partir de',
-    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1616768804761.jpeg',
-    price: ' 1.367',
-    promotionalPrice: 'R$ 1.367'
+    title: 'Diárias a partir de'
   },
   {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1618408664114.jpeg',
-    price: ' 2.287'
+    title: 'Diárias a partir de'
   },
   {
-    title: 'Diárias a partir de',
-    developer: 'Rockstar Games',
-    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982644528.jpeg',
-    price: ' 235,00'
+    title: 'Diárias a partir de'
   },
   {
-    title: 'Diárias a partir de',
-    developer: 'Rockstar Games',
-    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982523961.jpeg',
-    price: ' 235,00'
+    title: 'Diárias a partir de'
   },
   {
-    title: 'Diárias a partir de',
-    developer: 'Rockstar Games',
-    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982677521.jpeg',
-    price: ' 235,00'
-  },
-  {
-    title: 'Diárias a partir de',
-    developer: 'Rockstar Games',
-    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982775977.jpeg',
-    price: ' 235,00'
+    title: 'Diárias a partir de'
   }
 ]
-export const Newsletter = () => (
-  <Content>
-    <GameCardSlider items={items} />
-    <h1>teste</h1>
-  </Content>
-)
+
+// console.log(slice(1))
+
+export const Newsletter = () => {
+  // const [items, setItems] = useState(false)
+
+  // const getPromotions = (hasLimit = false) => {
+  //   if (hasLimit) {
+  //     items.slice(0, 3)
+  //   }
+
+  //   return items
+  // }
+
+  return (
+    <Content>
+      <GameCardSlider items={items} />
+      <Button textColor="white">Mostrar mais</Button>
+    </Content>
+  )
+}
 
 export default Newsletter

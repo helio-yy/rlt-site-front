@@ -5,6 +5,7 @@ import ArrowBackIosRounded from '@material-ui/icons/ArrowBackIosRounded'
 import ArrowForwardIosRounded from '@material-ui/icons/ArrowForwardIosRounded'
 
 import * as S from './styles'
+import Button from 'components/Button'
 
 export type GameCardSliderProps = {
   items: GameCardProps[]

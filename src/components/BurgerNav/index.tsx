@@ -79,13 +79,12 @@ const BurgerNav = () => {
           </li>
         </ul>
       </S.BurgerNav>
-      <MediaMatch lessThan="medium">
-        <S.Overlay
-          aria-hidden={!isOpen}
-          isOpen={isOpen}
-          onClick={() => setIsOpen(false)}
-        />
-      </MediaMatch>
+
+      <S.Overlay
+        aria-hidden={!isOpen}
+        isOpen={isOpen}
+        onClick={() => setIsOpen(false)}
+      />
     </>
   )
 }

@@ -4,7 +4,14 @@ import * as S from './styles'
 export type ButtonProps = {
   children?: React.ReactNode
   size?: 'small' | 'medium' | 'large'
-  // colors?: 'theme.colors.black' | 'theme.colors.white' | 'theme.colors.gray'
+  backgroundColor?:
+    | 'blueLight1'
+    | 'grennLight1'
+    | 'orangeLight1'
+    | 'redLight1'
+    | 'white'
+    | 'black'
+  textColor?: 'white' | 'blueLight1'
   fullWidth?: boolean
   icon?: React.ReactNode
   outline?: boolean
@@ -15,6 +22,8 @@ export const Button = ({
   children,
   icon,
   size = 'small',
+  backgroundColor = 'blueLight1',
+  textColor = 'blueLight1',
   fullWidth = false,
   outline = false,
 
@@ -25,6 +34,8 @@ export const Button = ({
     fullWidth={fullWidth}
     hasIcon={!!icon}
     outline={outline}
+    backgroundColor={backgroundColor}
+    textColor={textColor}
     {...props}
   >
     {!!icon && icon}

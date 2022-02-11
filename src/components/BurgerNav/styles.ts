@@ -15,23 +15,30 @@ export const BurgerIcon = styled.div`
     position: absolute;
     right: 0;
   `}
+
+  ${media.lessThan('medium')`
+    display: flex;
+  `}
 `
 type overlayProps = {
   isOpen: boolean
 }
 
 export const Overlay = styled.div<overlayProps>`
-  background: rgba(0, 0, 0, 0.5);
-  height: 100vh;
-  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s linear;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
   left: 0;
   right: 0;
-  top: 0;
   bottom: 0;
-  transition: all 0.2s ease;
-
+  z-index: 2;
   ${({ isOpen }) => `
-    opacity: ${isOpen ? 0.5 : 0};
+    opacity: ${isOpen ? 0.9 : 0};
+    visibility: ${isOpen ? 'visible' : 'hidden'};
+
   `}
 `
 type BurgerNavProps = {

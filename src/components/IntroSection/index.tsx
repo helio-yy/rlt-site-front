@@ -23,7 +23,17 @@ const IntroSection = () => {
               electronic typesetting, remaining essentially unchanged.
             </p>
 
-            <Button size="small">VENHA CONHECER</Button>
+            <Link href="/routs">
+              <a>
+                <Button
+                  size="small"
+                  backgroundColor="orangeLight1"
+                  textColor="white"
+                >
+                  VENHA CONHECER
+                </Button>
+              </a>
+            </Link>
           </S.Column>
           <S.Column>
             <S.CardImages>

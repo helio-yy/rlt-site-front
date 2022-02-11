@@ -3,7 +3,7 @@ import { ButtonProps } from '.'
 
 type WrapperProps = {
   hasIcon: boolean
-} & Pick<ButtonProps, 'size' | 'fullWidth' | 'outline'>
+} & Pick<ButtonProps, 'size' | 'fullWidth' | 'outline' | 'backgroundColor' | 'textColor'>
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
@@ -11,6 +11,7 @@ const wrapperModifiers = {
     font-size: ${theme.font.sizes.xsmall};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
     border-radius: ${theme.border.medium};
+    font-weight:${theme.font.medium};
   `,
   medium: (theme: DefaultTheme) => css`
     height: 4rem;
@@ -54,11 +55,10 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, size, fullWidth, hasIcon, outline }) => css`
+  ${({ theme, size, fullWidth, hasIcon, outline, backgroundColor, textColor }) => css`
     cursor: pointer;
-    color: ${theme.colors.white};
-    background: ${theme.colors.blueLight1};
-
+    color: ${theme.colors.[textColor!]};
+    background: ${theme.colors.[backgroundColor!]};
     padding: ${theme.spacings.xxsmall};
     transform: translateY(0);
     font-family: inherit;
