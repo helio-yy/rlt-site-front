@@ -1,7 +1,7 @@
 import Button from 'components/Button'
 import { Content } from 'components/Content'
 import GameCardSlider from 'components/GameCardSlider'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const items = [
   {
@@ -21,10 +21,40 @@ const items = [
   }
 ]
 
-// console.log(slice(1))
+console.log(items.slice(2))
 
 export const Newsletter = () => {
-  // const [items, setItems] = useState(false)
+  const [show, setShow] = useState(false)
+
+  // const show = array.filter((items) => {
+  //   return number > 3
+  // })
+
+  // useEffect((hasLimit = false) => {
+  //   const getPromotions = () => {
+  //     if (hasLimit) {
+  //       items.slice(0, 3)
+  //     }
+  //     console.log(items)
+
+  //     return items
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   const scrollListener = () => {
+  //     if (window.scrollY) {
+  //       setIsSticky(true)
+  //     } else {
+  //       setIsSticky(false)
+  //     }
+  //   }
+  //   window.addEventListener('scroll', scrollListener)
+
+  //   return () => {
+  //     window.removeEventListener('scroll', scrollListener)
+  //   }
+  // }, [])
 
   // const getPromotions = (hasLimit = false) => {
   //   if (hasLimit) {
@@ -36,8 +66,10 @@ export const Newsletter = () => {
 
   return (
     <Content>
-      <GameCardSlider items={items} />
-      <Button textColor="white">Mostrar mais</Button>
+      <GameCardSlider items={items} show={show} />
+      <Button textColor="white">
+        <a onClick={() => setShow(true)}> read more</a>
+      </Button>
     </Content>
   )
 }
