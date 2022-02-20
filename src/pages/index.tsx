@@ -7,14 +7,16 @@ import SocialRating from 'components/SocialRating'
 import IntroSection from 'components/IntroSection'
 import Newsletter from 'components/Newsletter'
 import FormSubscribeNew from 'components/FormSubscribeNew'
-import GameCardSlider from 'components/GameCardSlider'
+import GameCardSlider from 'components/PromotionCardSlider'
 import HeaderStick from 'components/HeaderStick'
+import Logo from 'components/Logo'
 
 export default function Home() {
   return (
     <>
       <HeaderStick />
       <Header />
+      <Logo />
       <Main />
       {/* <GameCardSlider /> */}
       {/* <FormSubscribeNew /> */}

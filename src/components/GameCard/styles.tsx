@@ -99,8 +99,6 @@ export const Wrapper = styled.article`
 .flip {
     position: relative;
     display: flex;
-
-    height: 300px;
     transform-style: preserve-3d;
     transition: transform 1s;
     width: 100%;
@@ -117,7 +115,7 @@ export const Wrapper = styled.article`
     display: flex;
     text-align: center;
     top: 0;
-    max-width: 100%;
+    width:inherit;
     img{
       width:100%;
     }

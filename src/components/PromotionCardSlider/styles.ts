@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-type WrapperProps = Pick<GameCardSliderProps, 'color'>
+type WrapperProps = Pick<PromotionCardSliderProps, 'color'>
 
 export const Wrapper = styled.section<WrapperProps>`
   ${({ theme, color }) => css`
     ${media.lessThan('large')`
       overflow-x: hidden;
+
     `}
     .slick-track,
     .slick-list {
@@ -27,6 +28,9 @@ export const Wrapper = styled.section<WrapperProps>`
     }
     .slick-list {
       margin: 0 -${theme.spacings.xsmall};
+      ${media.lessThan('medium')`
+      margin:${theme.spacings.xsmall}
+      `}
     }
     ${media.greaterThan('large')`
       .slick-slide > div {

@@ -7,7 +7,7 @@ import ArrowForwardIosRounded from '@material-ui/icons/ArrowForwardIosRounded'
 import * as S from './styles'
 import Button from 'components/Button'
 
-export type GameCardSliderProps = {
+export type PromotionCardSliderProps = {
   items: GameCardProps[]
   color?: 'blueLight1' | 'darkGray' | 'redLight1'
 }
@@ -54,7 +54,10 @@ const settings: SliderSettings = {
   prevArrow: <ArrowBackIosRounded aria-label="Voltar promo" />
 }
 
-const GameCardSlider = ({ items, color = 'darkGray' }: GameCardSliderProps) => (
+const PromotionCardSlider = ({
+  items,
+  color = 'darkGray'
+}: PromotionCardSliderProps) => (
   <S.Wrapper color={color}>
     <Slider settings={settings}>
       {items?.map((item, index) => (
@@ -64,4 +67,4 @@ const GameCardSlider = ({ items, color = 'darkGray' }: GameCardSliderProps) => (
   </S.Wrapper>
 )
 
-export default GameCardSlider
+export default PromotionCardSlider
