@@ -51,9 +51,10 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.div<wrapperProps>`
-  ${({ isOpen }) => css`
+  ${({ theme, isOpen }) => css`
     position: relative;
     width: max-content;
+    z-index: ${theme.layers.alwaysOnTop};
 
     ${Content} {
       transition: all 0.2s ease-in;

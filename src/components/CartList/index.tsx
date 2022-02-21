@@ -17,7 +17,9 @@ const CartList = () => (
     <S.Footer>
       <S.SubTotal>Subtotal: R$ 5.596,00</S.SubTotal>
       <Link href="/">
-        <Button size="small">Finalizar pedido</Button>
+        <Button size="small" textColor="white">
+          Finalizar pedido
+        </Button>
       </Link>
     </S.Footer>
   </S.Wrapper>

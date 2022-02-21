@@ -5,40 +5,40 @@ import { LogoProps } from '.'
 
 const wrapperModifiers = {
   normal: () => css`
-    width: 8rem;
-    height: auto;
+    width: 15rem;
+    height: 5rem;
     svg {
-      width: 50rem;
-      pointer-events: none;
+      width: 27rem;
+      margin-left: -6rem;
     }
   `,
   large: () => css`
-    width: auto;
+    width: 20rem;
     height: 5.9rem;
   `,
 
   hideOnMobile: () => css`
     ${media.lessThan('medium')`
-      width: auto;
+      width: 25rem;
+      height: 4.5rem;
+      display: flex;
+      margin-left:-2rem;
+
       svg {
-        height: 3rem;
+
         pointer-events: none;
       }
       .text {
-        /* display: none; */
+        display: none;
       }
     `}
   `
 }
 
 export const Wrapper = styled.div<LogoProps>`
-  background: red;
-  display: block;
-  display: flex;
-
+  background: #ccc;
   ${({ theme, color, size, hideOnMobile }) => css`
     color: ${theme.colors[color!]};
-
     ${!!size && wrapperModifiers[size]}
     ${!!hideOnMobile && wrapperModifiers.hideOnMobile}
   `}

@@ -1,6 +1,7 @@
 import BurgerNav from 'components/BurgerNav'
 import Button from 'components/Button'
 import CartIcon from 'components/CartIcon'
+import Logo from 'components/Logo'
 import MediaMatch from 'components/MediaMatch'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
@@ -28,7 +29,8 @@ export const HeaderStick = () => {
     <MediaMatch lessThan="medium">
       <S.Header className={`${isSticky ? 'sticky' : ''}`}>
         <S.Wrapper>
-          <CartIcon />
+          {/* <CartIcon /> */}
+          <Logo color="white" />
           <S.BtnPromo>
             <Link href="/routs">
               <a>

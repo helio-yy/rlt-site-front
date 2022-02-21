@@ -4,15 +4,13 @@ import MediaMatch from 'components/MediaMatch'
 import CartDropdown from 'components/CartDropdown'
 import UserDropdown from 'components/UserDropdown'
 import BurgerNav from 'components/BurgerNav'
+import Logo from 'components/Logo'
 
 const Header = () => {
   return (
     <S.Header>
       <S.Wrapper>
-        <img
-          src="https://d2odosjtfeb3gl.cloudfront.net/images/Logo-white-LTR.svg"
-          width="150"
-        />
+        <Logo color="white" />
 
         <BurgerNav />
 

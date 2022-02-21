@@ -9,15 +9,15 @@ import Newsletter from 'components/Newsletter'
 import FormSubscribeNew from 'components/FormSubscribeNew'
 import GameCardSlider from 'components/PromotionCardSlider'
 import HeaderStick from 'components/HeaderStick'
-import Logo from 'components/Logo'
+import BannerSlider from 'components/BannerSlider'
 
 export default function Home() {
   return (
     <>
       <HeaderStick />
       <Header />
-      <Logo />
-      <Main />
+      {/* <BannerSlider /> */}
+      {/* <Main /> */}
       {/* <GameCardSlider /> */}
       {/* <FormSubscribeNew /> */}
       <Newsletter />
