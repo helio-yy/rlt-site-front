@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <S.Header>
       <S.Wrapper>
-        <Logo color="white" />
+        <Logo color="white" hideOnMobile={false} />
 
         <BurgerNav />
 

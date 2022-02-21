@@ -36,7 +36,9 @@ const FormSubscribeNew = () => (
           icon={<EmailOutlinedIcon />}
         />
 
-        <Button size={'medium'}>ENVIAR</Button>
+        <Button textColor="white" size={'medium'}>
+          ENVIAR
+        </Button>
       </form>
     </S.Wrapper>
   </Content>

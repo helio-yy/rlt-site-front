@@ -19,9 +19,10 @@ export default function Home() {
       {/* <BannerSlider /> */}
       {/* <Main /> */}
       {/* <GameCardSlider /> */}
-      {/* <FormSubscribeNew /> */}
       <Newsletter />
       <IntroSection />
+      <FormSubscribeNew />
+
       <SocialRating />
       {/* <SeoDescription /> */}
       <Footer />

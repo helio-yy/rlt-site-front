@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
-export const Container = styled.section`
+export const Wrapper = styled.section`
   ${({ theme }) => css`
     width: ${theme.grid.container};
     background: #ccc;

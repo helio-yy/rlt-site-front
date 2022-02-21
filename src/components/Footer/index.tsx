@@ -7,11 +7,13 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 
 import * as S from './styles'
+import Logo from 'components/Logo'
 
 const Footer = () => (
   <S.Footer>
     <S.Wrapper>
       <S.Column>
+        <Logo size="large" color="white" hideOnMobile={false} />
         <h5>Localização</h5>
 
         <span>

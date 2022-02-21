@@ -30,7 +30,7 @@ export const HeaderStick = () => {
       <S.Header className={`${isSticky ? 'sticky' : ''}`}>
         <S.Wrapper>
           {/* <CartIcon /> */}
-          <Logo color="white" />
+          <Logo color="white" hideOnMobile={true} />
           <S.BtnPromo>
             <Link href="/routs">
               <a>
