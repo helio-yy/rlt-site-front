@@ -52,11 +52,8 @@ const items = [
 export const Newsletter = () => {
   return (
     <Wrapper>
-      <Heading color="blueLight1">
-        Momentos <span>marcantes</span>... <span>Com</span> ofertas incríveis
-      </Heading>
       {/* <PromotionCardSlider items={items} /> */}
-      <BannerSlider items={items} />
+      {/* <BannerSlider items={items} /> */}
 
       <MediaMatch lessThan="medium">
         <Button textColor="white"> Ver mais </Button>

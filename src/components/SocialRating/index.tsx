@@ -1,11 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
+import Heading from 'components/Heading'
 
 import * as S from './styles'
 
 const SocialRating = () => (
   <S.Section>
     <S.Wrapper>
+      <Heading color="blueLight1">
+        Sua <span>experiência...</span>
+        <span>É nosso</span> sucesso!
+      </Heading>
+
       <S.Logos>
         <Link href="/">
           <a>

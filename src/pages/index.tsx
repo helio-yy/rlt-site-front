@@ -10,13 +10,15 @@ import FormSubscribeNew from 'components/FormSubscribeNew'
 import GameCardSlider from 'components/PromotionCardSlider'
 import HeaderStick from 'components/HeaderStick'
 import BannerSlider from 'components/BannerSlider'
+import PromotionCardSlider from 'components/PromotionCardSlider'
 
 export default function Home() {
   return (
     <>
       <HeaderStick />
       <Header />
-      {/* <BannerSlider /> */}
+      <BannerSlider />
+      <PromotionCardSlider />
       {/* <Main /> */}
       {/* <GameCardSlider /> */}
       <Newsletter />

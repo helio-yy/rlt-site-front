@@ -2,9 +2,12 @@ import Banner, { BannerProps } from 'components/Banner'
 import Slider, { SliderSettings } from 'components/Slider'
 import * as S from './styles'
 
-export type BannerSliderProps = {
-  items: BannerProps[]
-}
+const items = [
+  {
+    title: 'Diárias a partir de',
+    img: 'https://s3.sa-east-1.amazonaws.com/cms.resortlatorre.com.br/Imagens/2021/Banner+Home_Julho+21.jpg'
+  }
+]
 
 const settings: SliderSettings = {
   dots: false,
@@ -18,7 +21,7 @@ const settings: SliderSettings = {
   ]
 }
 
-const BannerSlider = ({ items }: BannerSliderProps) => (
+const BannerSlider = () => (
   <S.Wrapper>
     <Slider settings={settings}>
       {items.map((item) => (

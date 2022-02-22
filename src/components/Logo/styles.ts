@@ -14,14 +14,14 @@ const wrapperModifiers = {
     }
     ${media.lessThan('medium')`
       .circle{
-        color:pink;
+        color:white;
       }
       .torre{
-        color:orange;
+        color:white;
       }
-      color: red;
+      color: white;
       .text {
-        color: gold;
+        color: white;
       }
     `}
   `,

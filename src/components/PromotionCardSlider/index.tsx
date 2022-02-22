@@ -6,12 +6,39 @@ import ArrowForwardIosRounded from '@material-ui/icons/ArrowForwardIosRounded'
 
 import * as S from './styles'
 import Button from 'components/Button'
+import { Content } from 'components/Content'
+import Heading from 'components/Heading'
 
 export type PromotionCardSliderProps = {
-  items: GameCardProps[]
   color?: 'blueLight1' | 'darkGray' | 'redLight1'
 }
-
+const items = [
+  {
+    title: 'Diárias a partir de',
+    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982644528.jpeg',
+    price: '1.123'
+  },
+  {
+    title: 'Diárias a partir de',
+    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982523961.jpeg',
+    price: '1.221'
+  },
+  {
+    title: 'Diárias a partir de',
+    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982737904.jpeg',
+    price: '844'
+  },
+  {
+    title: 'Diárias a partir de',
+    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982775977.jpeg',
+    price: '1.774'
+  },
+  {
+    title: 'Diárias a partir de',
+    img: 'https://d2wiap78u3ex1b.cloudfront.net/capas/1637982677521.jpeg ',
+    price: '1.194'
+  }
+]
 const settings: SliderSettings = {
   slidesToShow: 4,
   infinite: false,
@@ -55,16 +82,20 @@ const settings: SliderSettings = {
 }
 
 const PromotionCardSlider = ({
-  items,
   color = 'darkGray'
 }: PromotionCardSliderProps) => (
-  <S.Wrapper color={color}>
-    <Slider settings={settings}>
-      {items?.map((item, index) => (
-        <GameCard key={index} {...item} />
-      ))}
-    </Slider>
-  </S.Wrapper>
+  <Content>
+    <Heading color="blueLight1">
+      Momentos <span>marcantes</span>... <span>Com</span> ofertas incríveis
+    </Heading>
+    <S.Wrapper color={color}>
+      <Slider settings={settings}>
+        {items.map((item, index) => (
+          <GameCard key={index} {...item} />
+        ))}
+      </Slider>
+    </S.Wrapper>
+  </Content>
 )
 
 export default PromotionCardSlider
