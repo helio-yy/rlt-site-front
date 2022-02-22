@@ -6,18 +6,20 @@ type ImageProps = {
 }
 
 export const Wrapper = styled.main`
-  position: relative;
+  ${({ theme, color }) => css`
+    overflow: hidden;
+    position: relative;
+  `}
 `
 export const Image = styled.div`
   ${({ theme }) => css`
     width: 100%;
     background: red;
+    margin-bottom: ${theme.spacings.medium};
+    overflow-y: hidden;
+    position: relative;
     img {
       width: 100%;
-      ${media.greaterThan('huge')`
-        margin-bottom: 0rem;
-
-      `}
     }
   `}
 `
