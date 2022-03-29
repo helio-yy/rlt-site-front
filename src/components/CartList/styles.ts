@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     width: 21rem;
     display: flex;
     flex-direction: column;
+    position: relative;
     p {
       font-size: 1rem;
       text-align: center;

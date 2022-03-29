@@ -2,13 +2,23 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.white};
     color: ${theme.colors.blueLight1};
-    padding: 0.5rem 0.8rem;
+    /* padding: 0.5rem 0.8rem; */
     border-radius: 25px;
     margin-left: 2rem;
+    position: relative;
+
+    .mainIconsUser {
+      padding: 0.4rem 0.8rem;
+      border-radius: 25px;
+      background: ${theme.colors.white};
+      z-index: 2;
+      display: flex;
+      align-items: center;
+    }
     svg {
       font-size: 1.7rem;
+      border-radius: 25px;
     }
   `}
 `

@@ -5,7 +5,7 @@ import * as S from './styles'
 const items = [
   {
     title: 'Diárias a partir de',
-    img: 'https://s3.sa-east-1.amazonaws.com/cms.resortlatorre.com.br/Imagens/2021/Banner+Home_Julho+21.jpg'
+    img: 'https://s3.sa-east-1.amazonaws.com/cms.resortlatorre.com.br/banners/Banner_Corpus-Christi2022site-demo.jpg'
   }
 ]
 

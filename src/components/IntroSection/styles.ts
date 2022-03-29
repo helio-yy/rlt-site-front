@@ -5,6 +5,7 @@ export const Container = styled.section`
   ${({ theme }) => css`
     width: ${theme.grid.container};
     background-color: ${theme.colors.grennLight1};
+    margin-top: ${theme.spacings.xxlarge};
   `}
 `
 export const Content = styled.section`

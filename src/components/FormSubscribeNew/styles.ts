@@ -7,7 +7,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     max-width: 90rem;
-    margin: ${theme.spacings.small} auto;
+    margin: ${theme.spacings.medium} auto ${theme.spacings.xxlarge} auto;
 
     ${TextFieldStyles.Wrapper} {
       width: 38%;

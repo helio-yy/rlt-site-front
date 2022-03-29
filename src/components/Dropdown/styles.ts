@@ -18,6 +18,7 @@ export const Content = styled.div`
     border-radius: 5px;
     position: absolute;
     right: 0;
+    z-index: 3;
 
     ::before {
       content: '';
@@ -61,5 +62,27 @@ export const Wrapper = styled.div<wrapperProps>`
       ${isOpen && wrapperModifiers.open()}
       ${!isOpen && wrapperModifiers.close()}
     }
+  `}
+`
+
+type overlayProps = {
+  isOpen: boolean
+}
+
+export const Overlay = styled.div<overlayProps>`
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s linear;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  ${({ isOpen }) => `
+    opacity: ${isOpen ? 0.9 : 0};
+    visibility: ${isOpen ? 'visible' : 'hidden'};
+
   `}
 `

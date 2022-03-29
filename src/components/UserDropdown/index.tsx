@@ -10,8 +10,10 @@ const UserDropdown = () => (
     <Dropdown
       title={
         <>
-          <MenuIcon />
-          <PersonOutlineOutlinedIcon />
+          <div className="mainIconsUser">
+            <MenuIcon />
+            <PersonOutlineOutlinedIcon />
+          </div>
         </>
       }
     >

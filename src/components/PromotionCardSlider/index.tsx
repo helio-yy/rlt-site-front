@@ -56,13 +56,14 @@ const settings: SliderSettings = {
       breakpoint: 1024,
       settings: {
         arrows: true,
-        slidesToShow: 2.2
+        slidesToShow: 2.3
       }
     },
     {
       breakpoint: 570,
       settings: {
         arrows: false,
+
         vertical: true,
         unslick: true,
         slidesToShow: 20,
@@ -72,8 +73,10 @@ const settings: SliderSettings = {
     {
       breakpoint: 375,
       settings: {
-        arrows: false,
-        slidesToShow: 1.1
+        vertical: true,
+        unslick: true,
+        slidesToShow: 20,
+        verticalSwiping: false
       }
     }
   ],
@@ -85,10 +88,11 @@ const PromotionCardSlider = ({
   color = 'darkGray'
 }: PromotionCardSliderProps) => (
   <Content>
-    <Heading color="blueLight1">
-      Momentos <span>marcantes</span>... <span>Com</span> ofertas incríveis
-    </Heading>
     <S.Wrapper color={color}>
+      <Heading textPosition="left" color="blueLight1">
+        Momentos <span>marcantes</span>... <span>Com</span> ofertas incríveis
+      </Heading>
+
       <Slider settings={settings}>
         {items.map((item, index) => (
           <GameCard key={index} {...item} />

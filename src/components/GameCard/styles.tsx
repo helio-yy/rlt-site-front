@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.article`
   ${({ theme }) => css`
@@ -7,24 +8,19 @@ export const Wrapper = styled.article`
     flex-direction: column;
     width: 100%;
     height: auto;
-    background-color:#eee;
-
+    background-color: #faf8f8;
     padding: 1rem;
     transition: all 100ms ease-in;
-    border-radius: ${theme.border.small};
+    border-radius: ${theme.border.medium};
     margin-top: 1rem;
     margin-bottom: 3rem;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.02);
-      box-shadow:
-      0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075),
-      0 16px 16px hsl(0deg 0% 0% / 0.075)
-    ;
-  }
+      box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
     }
 
     :hover .Content {
@@ -63,89 +59,66 @@ export const Wrapper = styled.article`
         position: relative;
       `}
 
-      .ImageBox{
+      .ImageBox {
         height: auto;
         width: 100%;
-        background: #f6f7f8;
-        background-image: linear-gradient(
-          to right,
-          #f6f7f8 0%,
-          #edeef1 20%,
-          #f6f7f8 40%,
-          #f6f7f8 100%
-        );
-        background-size: 80rem 14rem;
-        animation: placeholderShimmer 1s linear infinite forwards;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-        @keyframes placeholderShimmer {
-          0% {
-            background-position: -40rem 0;
-          }
-          100% {
-            background-position: 40rem 0;
-          }
-        }
-
-
       }
-
-
     }
-//HOVER CLIP//
-.flip {
-    position: relative;
-    display: flex;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.flip .front {
-    backface-visibility: hidden;
-    background: teal;
-    box-sizing: border-box;
-    color: #fff;
-    font-weight: bold;
-    left: 0;
-    display: flex;
-    text-align: center;
-    top: 0;
-    width:inherit;
-    img{
-      width:100%;
-    }
-}
-
-.flip .back {
-    backface-visibility: hidden;
-    background: #016699;
-    color: #fff;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    -webkit-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-    top: 0;
-}
-
-.flip:hover {
-    -webkit-transform: rotateY( 180deg );
-   transform: rotateY( 180deg );
-}
-//HOVER CLIP//
-
   `}
+
+  /*HOVER CLIP CARD*/
+   .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+
+    img {
+      width: 100%;
+      height: 300px;
+      border-radius: 15px 15px 0 0;
+    }
+
+    ${media.lessThan('medium')`
+      height: 350px;
+      img{
+        height: 350px;
+      }
+    `}
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    ${({ theme }) => css`
+      background-color: ${theme.colors.blueLight2};
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px 15px 0 0;
+    `}
+  } /*HOVER CLIP CARD*/
 `
 
 export const Info = styled.div`
@@ -194,8 +167,8 @@ const priceModifiers = {
   default: (theme: DefaultTheme) => css`
     color: ${theme.colors.white};
     padding: 0 ${theme.spacings.xxsmall};
-    background-color: ${theme.colors.secondary};
-    border-radius: ${theme.border.radius};
+    background-color: ${theme.colors.blueLight1};
+    border-radius: ${theme.border.medium};
     margin-right: calc(${theme.spacings.xxsmall} / 2);
   `,
 

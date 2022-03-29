@@ -9,16 +9,19 @@ export type GameCardProps = {
 const GameCard = ({ title, developer, img, price }: GameCardProps) => (
   <S.Wrapper>
     <div className="ImageBox">
-      <a className="flip" href="#">
-        <span className="front">
-          <img src={img} alt={title} />
-        </span>
-
-        <span className="back">
-          <h1>Carnaval 2022</h1>
-          <p>Restaure suas emoções</p>
-        </span>
-      </a>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <img src={img} alt={title} />
+          </div>
+          <div className="flip-card-back">
+            <div>
+              <h1>Carnaval 2022</h1>
+              <p>Restaure suas emoções</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div className="Content">

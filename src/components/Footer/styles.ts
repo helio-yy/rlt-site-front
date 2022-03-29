@@ -5,6 +5,7 @@ export const Footer = styled.div`
   ${({ theme }) => css`
     width: ${theme.grid.container};
     background-color: ${theme.colors.blueLight1};
+    padding: ${theme.spacings.small} 0;
   `}
 `
 export const Wrapper = styled.div`

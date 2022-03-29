@@ -25,7 +25,7 @@ export default function Home() {
       <IntroSection />
       <FormSubscribeNew />
 
-      <SocialRating />
+      {/* <SocialRating /> */}
       {/* <SeoDescription /> */}
       <Footer />
     </>
