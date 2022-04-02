@@ -1,12 +1,18 @@
 import * as S from './styles'
 
-export type GameCardProps = {
+export type PromotionCardProps = {
   img: string
   title: string
+  description: string
   price: string
 }
 
-const GameCard = ({ title, developer, img, price }: GameCardProps) => (
+const PromotionCard = ({
+  title,
+  description,
+  img,
+  price
+}: PromotionCardProps) => (
   <S.Wrapper>
     <div className="ImageBox">
       <div className="flip-card">
@@ -16,8 +22,8 @@ const GameCard = ({ title, developer, img, price }: GameCardProps) => (
           </div>
           <div className="flip-card-back">
             <div>
-              <h1>Carnaval 2022</h1>
-              <p>Restaure suas emoções</p>
+              <h1>{title}</h1>
+              <p>{description}</p>
             </div>
           </div>
         </div>
@@ -26,7 +32,7 @@ const GameCard = ({ title, developer, img, price }: GameCardProps) => (
 
     <div className="Content">
       <S.Info>
-        <h2>{title}</h2>
+        <h2>Diárias a partir de</h2>
       </S.Info>
       <S.BuyBox>
         <span>Rs</span>
@@ -37,4 +43,4 @@ const GameCard = ({ title, developer, img, price }: GameCardProps) => (
   </S.Wrapper>
 )
 
-export default GameCard
+export default PromotionCard

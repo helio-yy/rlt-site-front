@@ -53,6 +53,9 @@ ul, li {
     transform: translateY(-0.2rem);
   }
 }
+.rdrDefinedRangesWrapper {
+  display: none;
+}
 
 `
 

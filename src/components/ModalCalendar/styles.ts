@@ -14,22 +14,23 @@ export const Content = styled.div`
     justify-content: center;
     background: ${theme.colors.white};
     color: ${theme.colors.black};
-    margin-top: 1.5rem;
+    margin-top: 0rem;
     padding: ${theme.spacings.small};
-    border-radius: 5px;
+    border-radius: ${theme.border.medium};
     position: absolute;
-    right: 0;
+    left: 1rem;
     z-index: 3;
+    box-shadow: ${theme.shadows.shadowsCard};
 
-    ::before {
+    /*::before {
       content: '';
       position: absolute;
       border-right: 1.2rem solid transparent;
       border-left: 1.2rem solid transparent;
       border-bottom: 1.2rem solid ${theme.colors.white};
       top: -0.5rem;
-      right: 0;
-    }
+      left: 5rem;
+    }*/
   `}
 `
 
@@ -63,27 +64,5 @@ export const Wrapper = styled.div<wrapperProps>`
       ${isOpen && wrapperModifiers.open()}
       ${!isOpen && wrapperModifiers.close()}
     }
-  `}
-`
-
-type overlayProps = {
-  isOpen: boolean
-}
-
-export const Overlay = styled.div<overlayProps>`
-  background: rgba(0, 0, 0, 0.7);
-  transition: 0.3s linear;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  ${({ isOpen }) => `
-    opacity: ${isOpen ? 0.9 : 0};
-    visibility: ${isOpen ? 'visible' : 'hidden'};
-
   `}
 `
