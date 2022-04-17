@@ -9,14 +9,13 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Resort La Torre - All Inclusive</title>
-        <link rel="shortcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <title>Herobase | Todo Herói Precisa De Uma Base!</title>
+        <link rel="shortcut icon" href="/img/favicon-32x32.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#06092B" />
         <meta
           name="description"
-          content="Resort La Torre - All Inclusive - Porto Seguro"
+          content="Herobase - Todo Herói Precisa De Uma Base!"
         />
       </Head>
 

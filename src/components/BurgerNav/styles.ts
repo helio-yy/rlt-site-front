@@ -53,7 +53,7 @@ export const BurgerNav = styled.nav<BurgerNavProps>`
     top: 0;
     bottom: 0;
     right: 0;
-    background: ${theme.colors.white};
+    background: ${theme.colors.darkGray};
     z-index: ${theme.layers.menu};
     padding: ${theme.spacings.small};
     display: flex;
@@ -61,12 +61,6 @@ export const BurgerNav = styled.nav<BurgerNavProps>`
     text-align: start;
     transition: all 0.4s ease-out;
 
-    li:nth-child(2) {
-      border-bottom: 1px solid ${theme.colors.lightGray};
-    }
-    li:nth-child(9) {
-      border-bottom: 1px solid ${theme.colors.lightGray};
-    }
     a {
       display: flex;
       margin: 0.5rem;
@@ -76,8 +70,10 @@ export const BurgerNav = styled.nav<BurgerNavProps>`
       padding: 0.6rem ${theme.spacings.xxsmall};
       justify-content: flex-end;
       transition: all 0.2s ease;
+      color: ${theme.colors.white};
+
       :hover {
-        color: ${theme.colors.blueLight4};
+        color: ${theme.colors.orangeLight1};
       }
       svg {
         margin-left: 0.8rem;
@@ -105,30 +101,13 @@ export const CloseWrapper = styled.div`
     margin-bottom: 2rem;
 
     svg {
-      color: ${theme.colors.darkGray};
+      color: ${theme.colors.lightGray};
       font-size: 2rem;
 
       cursor: pointer;
       :hover {
-        color: ${theme.colors.blueLight4};
+        color: ${theme.colors.orangeLight1};
       }
     }
   `}
 `
-
-export const InforPhone = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 2.5rem;
-  p {
-    font-size: 1.3rem;
-  }
-`
-
-// export const lineDivision = styled.div`
-//   width: 100%;
-//   height: 1px;
-//   margin: 0.7rem 0;
-//   background-color: #eee;
-// `

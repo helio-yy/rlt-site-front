@@ -1,19 +1,14 @@
 import * as S from './styles'
-import CountersNumbers from 'components/CountersNumbers'
 
-const IntroSection = () => {
+const OurWork = () => {
   return (
     <>
       <S.Container>
         <S.Content>
           <S.Column>
-            <span>
-              <img src="https://i.ibb.co/CtHyN50/image-header.png" />
-            </span>
-          </S.Column>
-          <S.Column>
-            {' '}
             <p>
+              <h1>RED BULL - PITAYA EDITION</h1>
+              <br></br>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
@@ -22,11 +17,23 @@ const IntroSection = () => {
               typesetting, remaining essentially unchanged.
             </p>
           </S.Column>
+          <S.Column>
+            <S.Infor>
+              <div>
+                <strong>CLIENT</strong> <span>RED BULL</span>
+              </div>
+              <div>
+                <strong>SERVICE</strong> <span>CUSTOM MAP CREATION</span>
+              </div>
+              <div>
+                <strong>YEAR</strong> <span>MARCH 2022</span>
+              </div>
+            </S.Infor>
+          </S.Column>
         </S.Content>
-        <CountersNumbers />
       </S.Container>
     </>
   )
 }
 
-export default IntroSection
+export default OurWork

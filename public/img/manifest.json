@@ -1,21 +1,17 @@
 {
-  "name": "Resort La Torre",
-  "short_name": "rlt-site",
+  "name": "Herobase",
+  "short_name": "Herobase",
   "icons": [
     {
       "src": "/img/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "/img/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
+
   ],
-  "background_color": "#06092B",
-  "description": "Boilerlate utilizando Typescript, React, NextJS e Styled Components!",
+  "background_color": "#000",
+  "description": "Herobase | Todo Herói Precisa De Uma Base!",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#06092B"
+  "theme_color": "#000"
 }

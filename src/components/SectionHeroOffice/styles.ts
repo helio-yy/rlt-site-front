@@ -7,62 +7,43 @@ export const Container = styled.section`
     background-color: ${theme.colors.black};
     margin-top: ${theme.spacings.xxlarge};
     ${media.lessThan('medium')`
-    margin-top: ${theme.spacings.small};
-
+      margin:0;
     `}
+    h1 {
+      text-align: center;
+      color: ${theme.colors.white};
+    }
   `}
 `
 export const Content = styled.section`
   ${({ theme }) => css`
     max-width: ${theme.grid.content};
-    margin: 0 auto;
+    margin: ${theme.spacings.xxlarge} auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     ${media.lessThan('medium')`
     grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column-reverse;
-
+    padding: 0 ${theme.spacings.medium};
+    margin-top:2rem;
+    justify-content: center;
+    `}
+    ${media.lessThan('large')`
+    padding: 0 ${theme.spacings.medium};
     `}
   `}
 `
-
 export const Column = styled.div`
   ${({ theme }) => css`
-    padding: 0 ${theme.spacings.large};
-    color: white;
+    padding: 0;
+    color: ${theme.colors.white};
     display: flex;
     justify-content: end;
-    span {
-      width: 40rem;
-      padding: 5px;
-
-      img {
-        width: 100%;
-        margin-bottom: -3.8rem;
-        position: relative;
-        z-index: 5;
-        ${media.lessThan('medium')`
-          margin-bottom: -7rem;
-        `}
-        ${media.lessThan('large')`
-        `}
-      }
-    }
     p {
-      margin-bottom: ${theme.spacings.xsmall};
-      color: ${theme.colors.lightGray};
       line-height: 1.6;
-      text-align: right;
       ${media.lessThan('medium')`
       text-align: center;
-        `}
+      padding: 0 ${theme.spacings.medium};
+      `}
     }
-
-    ${media.lessThan('large')`
-      padding: ${theme.spacings.xsmall};
-
-    `}
   `}
 `

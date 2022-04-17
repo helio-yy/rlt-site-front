@@ -1,20 +1,18 @@
 import Header from 'components/Header'
-import IntroSection from 'components/IntroSection'
-import FormSubscribeNew from 'components/FormSubscribeNew'
-import HeaderStick from 'components/HeaderStick'
-import BannerSlider from 'components/BannerSlider'
-import PromotionCardSlider from 'components/PromotionCardSlider'
+import TeamCardSlider from 'components/TeamCardSlider'
 import Footer from 'components/Footer'
+import IntroSection from 'components/IntroSection'
+import ThunbImages from 'components/ThunbImages'
+import SectionHeroOffice from 'components/SectionHeroOffice'
 
 export default function Home() {
   return (
     <>
-      <HeaderStick />
       <Header />
-      <BannerSlider />
-      <PromotionCardSlider />
       <IntroSection />
-      <FormSubscribeNew />
+      <ThunbImages />
+      <TeamCardSlider />
+      <SectionHeroOffice />
       <Footer />
     </>
   )

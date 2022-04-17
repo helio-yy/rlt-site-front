@@ -2,14 +2,6 @@ import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
-@font-face {
-    font-family: 'bodoni_elegant_extbdregular';
-    src: url('https://s3.sa-east-1.amazonaws.com/assets.resortlatorre.com.br/fonts/bodonielegant-extrabold-webfont.woff') format('woff2'),;
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 :root{
   --primary-color: #00599D;
 
@@ -33,6 +25,7 @@ ${({ theme }) => css`
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.medium};
     color: ${theme.colors.darkGray};
+    background-color: ${theme.colors.black};
   }
 `}
 
@@ -53,8 +46,16 @@ ul, li {
     transform: translateY(-0.2rem);
   }
 }
-.rdrDefinedRangesWrapper {
-  display: none;
+
+.error-page{
+  height: calc(100vh - 500px);
+  color:#fff;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  h1{font-size:10rem;}
+
 }
 
 `

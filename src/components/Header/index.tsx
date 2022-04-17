@@ -1,16 +1,19 @@
 import * as S from './styles'
 import Link from 'next/link'
 import MediaMatch from 'components/MediaMatch'
-import CartDropdown from 'components/CartDropdown'
-import UserDropdown from 'components/UserDropdown'
 import BurgerNav from 'components/BurgerNav'
 import Logo from 'components/Logo'
+import { ActiveLink } from 'components/ActiveLink'
 
 const Header = () => {
   return (
     <S.Header>
       <S.Wrapper>
-        <Logo color="white" hideOnMobile={false} />
+        <Link href="./">
+          <a>
+            <Logo />
+          </a>
+        </Link>
 
         <BurgerNav />
 
@@ -18,39 +21,22 @@ const Header = () => {
           <S.MenuDesk>
             <ul>
               <li>
-                <a href="/">All Inclusive</a>
+                <ActiveLink href={`/`} activeClassName="active">
+                  <a> HOME</a>
+                </ActiveLink>
               </li>
               <li>
-                <a href="/">Acomodações</a>
+                <ActiveLink href={`/about`} activeClassName="active">
+                  <a> OUR WORK</a>
+                </ActiveLink>
               </li>
               <li>
-                <a href="/">Gastronomia</a>
-              </li>
-              <li>
-                <a href="/">Lazer</a>
-              </li>
-              <li>
-                <a href="/">Clube de Praia</a>
-              </li>
-              <li>
-                <a href="/">Sustentabilidade</a>
-              </li>
-              <li>
-                <a href="/">Contato</a>
+                <ActiveLink href={`/404`} activeClassName="active">
+                  <a> TEAM</a>
+                </ActiveLink>
               </li>
             </ul>
           </S.MenuDesk>
-        </MediaMatch>
-
-        <MediaMatch greaterThan="medium">
-          <S.myAccount>
-            <Link href="/" passHref>
-              <div className="btnPromo">Promoções</div>
-            </Link>
-
-            <CartDropdown />
-            <UserDropdown />
-          </S.myAccount>
         </MediaMatch>
       </S.Wrapper>
     </S.Header>

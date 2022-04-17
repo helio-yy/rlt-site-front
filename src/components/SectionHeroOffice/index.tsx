@@ -1,18 +1,18 @@
-import * as S from './styles'
-import CountersNumbers from 'components/CountersNumbers'
+import HeroOfficeCardSlider from 'components/HeroOfficeCardSlider'
 
-const IntroSection = () => {
+import * as S from './styles'
+
+const SectionHeroOffice = () => {
   return (
     <>
       <S.Container>
+        <h1>HERO OFFICE</h1>
+
         <S.Content>
           <S.Column>
-            <span>
-              <img src="https://i.ibb.co/CtHyN50/image-header.png" />
-            </span>
+            <HeroOfficeCardSlider />
           </S.Column>
           <S.Column>
-            {' '}
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the standard dummy text ever since
@@ -23,10 +23,9 @@ const IntroSection = () => {
             </p>
           </S.Column>
         </S.Content>
-        <CountersNumbers />
       </S.Container>
     </>
   )
 }
 
-export default IntroSection
+export default SectionHeroOffice

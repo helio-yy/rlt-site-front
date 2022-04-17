@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Header = styled.div`
   ${({ theme }) => css`
     width: ${theme.grid.container};
-    background-color: ${theme.colors.blueLight1};
+    background-color: ${theme.colors.black};
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -42,28 +42,15 @@ export const MenuDesk = styled.div`
     a {
       color: ${theme.colors.white};
       font-size: ${theme.font.sizes.small};
-      margin: 0px 0.5rem;
+      margin: 0px 1.3rem;
       padding: 0.5rem 0;
+      transition: all ease 0.3s;
+      &:hover {
+        color: ${theme.colors.orangeLight1};
+      }
+      .active {
+        border-bottom: 0.3rem solid ${theme.colors.white};
+      }
     }
   `}
-`
-export const myAccount = styled.div`
-  padding: 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-
-  .btnPromo {
-    background-color: transparent;
-    padding: 0.4rem 1.3rem;
-    font-size: 1.2rem;
-    border: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 50px;
-    color: white;
-    border: 1px solid white;
-    font-family: inherit;
-    cursor: pointer;
-  }
 `

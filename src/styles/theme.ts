@@ -35,17 +35,17 @@ export default {
     grennLight2: '#8BAA84',
     grennLight3: '#B5CDB2',
 
-    orangeLight1: '#D79657',
+    orangeLight1: '#ff2f00',
     orangeLight2: '#EDA460',
 
     redLight1: '#C96C6C',
     redLight2: '#DE7777',
 
     white: '#FAFAFA',
-    black: '#121212',
+    black: '#141414',
     lightGray: '#eeeeee',
     gray: '#b6b5b5',
-    darkGray: '#464647'
+    darkGray: '#1d1d1d'
   },
   spacings: {
     xxsmall: '0.8rem',
